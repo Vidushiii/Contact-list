@@ -7,9 +7,14 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-
 app.get('/', function (req, res) {
     return res.render('home', { title: "expressssss" });
+});
+
+app.get('/practice', function (req, res) {
+    return res.render('practice', {
+        title: "practice"
+    });
 });
 
 app.listen(port, function (err) {
