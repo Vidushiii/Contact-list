@@ -1,4 +1,43 @@
 body{
-    background-color: blueviolet;
+    background-color: rgb(224, 235, 232);
+    
+}
+
+#main-div{
+    min-height: 30px;
+    width: 300px;
+    background-color: burlywood;
+    margin-left: 46px;
+    border-style: double;
+}
+input{
+    padding: 4px;
+    width: 140px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+button{
+    margin-top: 10px;;
+}
+
+#list{
     text-align: center;
+}
+
+#list li{
+    display: flex;
+    flex-wrap: nowrap;
+    border-style: double;
+    background-color: coral;
+    margin: 5px;
+    width: 300px;  
+    left: 50%;
+}
+
+#list li div{
+    width: 200px;
+    margin: auto;
+    text-align: center;
+    display: inline;
 }

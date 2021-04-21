@@ -1,6 +1,9 @@
 <html>
 <header>
     <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
     <!--using it cz we r adding ejs and titile is an obj here -->
 
     <title>
@@ -9,28 +12,36 @@
 </header>
 
 <body>
-    <div>
-        <h1>Contact - List</h1>
+    <h1>Contact - List</h1>
+    <div id="list">
+
         <ul>
             <% for(let i of contactlist) { %>
                 <li>
-                    <p>
-                        <%= i.name %>
-                    </p>
-                    <p>
-                        <%= i.phone %>
-                    </p>
+                    <div>
+                        <p>
+                            <%= i.name %>
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <%= i.phone %>
+                                <a><i class="fas fa-times-circle"></i></a>
+                        </p>
+                    </div>
                 </li>
+
                 <% } %>
         </ul>
+        <div id="main-div">
+            <form action="/create_contact" method="POST">
+                <input type="text" name="name" placeholder="enter name">
+                <input type="number" name="phone" placeholder="enter number">
+                <button type="submit">ADD</button>
+            </form>
+        </div>
     </div>
-    <div>
-        <form action="/create_contact" method="POST">
-            <input type="text" name="name" placeholder="enter name">
-            <input type="number" name="phone" placeholder="enter number">
-            <button type="submit">Submit</button>
-        </form>
-    </div>
+
     <script type="text/javascript" src="/js/home.js"></script>
 </body>
 
