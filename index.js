@@ -20,7 +20,7 @@ app.get('/', function (req, res) {
 
 app.get('/delete-contact', function (req, res) {
     let phone = req.query.phone;
-    let contactIndex = contact_List.findIndex(contact => contact.phone == phone);
+    let contactIndex = contact_List.findIndex(contact => contact.phone === phone);
 
     if (contactIndex != -1) {
         contact_List.splice(contactIndex, 1);
